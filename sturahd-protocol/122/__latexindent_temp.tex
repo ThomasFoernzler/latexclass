@@ -1,19 +1,85 @@
-\title{Sitzungsunterlagen der 122. StuRa-Sitzung}
-\date{\vspace{-2em}1. Dezember 2020\vspace{-1em}} % Datum einfügen
-\maketitle
+\NeedsTeXFormat{LaTeX2e}[2007/07/20]
+\documentclass[fontsize=11pt]{scrartcl}[2011/04/02]
+\usepackage{
+    geometry,
+    graphicx,
+    ifthen,
+    kvoptions,
+    lastpage,
+    marvosym,
+    scrlayer-scrpage,
+    tikz,
+    xcolor,
+    hyperref,
+    microtype,
+}
+\usepackage[mono=false]{libertine}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\geometry{
+a4paper,
+top=5cm,
+bottom=4cm,
+}
+\pagestyle{scrheadings}
+\hypersetup{
+pdfborder={0 0 0},
+}
 
-Unterlageninformationen
-\hrule
-Stand: 27.11.2020
-Protokoll genehmigt am: [Datum einfügen]
+\def\SetLogo{
+\tikz [remember picture,overlay]
+\node [shift={(-46.15mm,-19.12mm)}]
+      at (current page.north east)
+         {\includegraphics%[width=92.29mm, height=38.24mm]
+         {../logo.png}};
+}
+\def\SetFooter{
+\tikz [remember picture,overlay]
+\node [shift={(-50mm,19.12mm)}]
+     at (current page.south east)
+     {\parbox{8cm}{
+          \begin{flushright}
+               \eventnumber. SturaSitzung am \datum \\
+               Alber-Ueberle-Stra\ss e 3-5. 69120 Heidelberg (DE)
+          \end{flushright}
 
-Siitzungsinformationen:
-\hrule
-Ort: Online
-Uhrzeit: 19:00 Uhr s.t.
+}};
+}
+\def\SetPageNumber{
+\tikz [remember picture,overlay]
+\node [shift={(53.5mm,-42.98mm)}]
+     at (current page.north west)
+     {\parbox{4.4cm}{\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
+}
 
-Informationsmaterial:
-\hrule
-\begin{enumerate}
-    \item Termine   von   AKs,   Referaten   und   Kommissionen   unter   „VS-Strukturen“: https://www.stura.uni-heidelberg.de
-\end{enumerate}
+\rohead{\SetLogo\SetPageNumber}
+\rofoot{\SetFooter}{}
+\lefoot{}
+
+\let\oldmaketitle\maketitle
+\def\maketitle{\oldmaketitle\thispagestyle{scrheadings}}
+
+\DeclareUnicodeCharacter{20AC}{\euro}
+
+\renewcommand\thesection{TOP \arabic{section}:}
+\renewcommand\contentsname{Tagesordnung}
+\newenvironment{antrag}{\begin{quote}\begin{itshape}}{\end{itshape}\end{quote}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\def\eventnumber{122}
+\def\datum{1.12.2020}
+
+\begin{document}
+    \input{titlepage.tex}
+    \tableofcontents
+    \input{opening.tex}
+    \input{Redezeitbegrenzung.tex}
+    \input{wahlen.tex}
+    \input{satzungen.tex}
+    \input{diskussionen.tex}
+    \input{finanzen.tex}
+    \input{infos}
+\end{document}

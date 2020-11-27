@@ -12,6 +12,7 @@
     xcolor,
     hyperref,
     microtype,
+    tabularx,
 }
 \usepackage[mono=false]{libertine}
 \usepackage[ngerman]{babel}
@@ -21,6 +22,7 @@
 a4paper,
 top=5cm,
 bottom=4cm,
+width=16cm
 }
 \pagestyle{scrheadings}
 \hypersetup{
@@ -36,43 +38,23 @@ pdfborder={0 0 0},
 }
 \def\SetFooter{
 \tikz [remember picture,overlay]
-\node [
-shift={(-85.21mm,19.12mm)}
-]
+\node [shift={(-65mm,30mm)}]
      at (current page.south east)
-     {\parbox{4.4cm}{
-     \color{gray}
-     \sffamily
-     \scriptsize
-     \begin{flushright}
-     \Telefon\quad 06221\,54-14999\\
-     \FAX\quad 06221\,54-16114999\\
-     \Letter\quad \href{mailto:@uni-hd.de}{\color{gray}@uni-hd.de}\\
-     \href{http://.uni-hd.de}{\color{gray}http://.uni-hd.de}
-     \end{flushright}
-}};
-\tikz [remember picture,overlay]
-\node [
-shift={(-34.01mm,19.12mm)}
-]
-     at (current page.south east)
-     {\parbox{4.4cm}{
-     \color{gray}
-     \sffamily
-     \scriptsize
-     \begin{flushleft}
-     Fachschaft Info\\
-     Im Neuenheimer Feld 205\\
-     Raum 01.301\\
-69120 Heidelberg
-     \end{flushleft}
+     {\parbox{8cm}{
+          \begin{flushright}
+               \textcolor{gray}{
+               \eventnumber. SturaSitzung am \datum \\
+               Alber-Ueberle-Stra\ss e 3-5. 69120 Heidelberg (DE)
+               }
+          \end{flushright}
+
 }};
 }
 \def\SetPageNumber{
 \tikz [remember picture,overlay]
-\node [shift={(53.5mm,-42.98mm)}]
-     at (current page.north west)
-     {\parbox{4.4cm}{\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
+\node [shift={(50mm,30mm)}]
+     at (current page.south west)
+     {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
 }
 
 \rohead{\SetLogo\SetPageNumber}
@@ -84,12 +66,35 @@ shift={(-34.01mm,19.12mm)}
 
 \DeclareUnicodeCharacter{20AC}{\euro}
 
-\renewcommand\thesection{TOP \arabic{section}:}
-\renewcommand\contentsname{Tagesordnung}
+\AtBeginDocument{\renewcommand{\contentsname}{Tagesordnung}}
+
 \newenvironment{antrag}{\begin{quote}\begin{itshape}}{\end{itshape}\end{quote}}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
+
+\def\eventnumber{122}
+\def\datum{1.12.2020}
+\def\abstimmungsergebnis#1#2#3#4{
+     \begin{center}
+          \begin{tabular}{|m{8cm}|m{1cm}|m{1cm}|m{2cm}|}
+               \hline
+               TOP-Titel & Ja & Nein & Enthaltung\\\hline
+               #1 & #2 & #3 & #4\\\hline
+          \end{tabular}
+     \end{center}
+}
+\def\antrag#1#2#3#4#5#6#7#8{%1titel,2lesung,3ja,4nein,5ent,6antragstext,7begründung,8diskussion
+     \subsection{#1 (#2)}
+     \paragraph{Abstimmungsergebnis}
+     \abstimmungsergebnis{#1}{#3}{#4}{#5}
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #6
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #7
+     \paragraph{Diskussion:}\phantom{spacer}\\
+     #8
+}
 
 \begin{document}
     \input{titlepage.tex}
