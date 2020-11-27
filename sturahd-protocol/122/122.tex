@@ -1,0 +1,104 @@
+\NeedsTeXFormat{LaTeX2e}[2007/07/20]
+\documentclass[fontsize=11pt]{scrartcl}[2011/04/02]
+\usepackage{
+    geometry,
+    graphicx,
+    ifthen,
+    kvoptions,
+    lastpage,
+    marvosym,
+    scrlayer-scrpage,
+    tikz,
+    xcolor,
+    hyperref,
+    microtype,
+}
+\usepackage[mono=false]{libertine}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\geometry{
+a4paper,
+top=5cm,
+bottom=4cm,
+}
+\pagestyle{scrheadings}
+\hypersetup{
+pdfborder={0 0 0},
+}
+
+\def\SetLogo{
+\tikz [remember picture,overlay]
+\node [shift={(-46.15mm,-19.12mm)}]
+      at (current page.north east)
+         {\includegraphics%[width=92.29mm, height=38.24mm]
+         {../logo.png}};
+}
+\def\SetFooter{
+\tikz [remember picture,overlay]
+\node [
+shift={(-85.21mm,19.12mm)}
+]
+     at (current page.south east)
+     {\parbox{4.4cm}{
+     \color{gray}
+     \sffamily
+     \scriptsize
+     \begin{flushright}
+     \Telefon\quad 06221\,54-14999\\
+     \FAX\quad 06221\,54-16114999\\
+     \Letter\quad \href{mailto:@uni-hd.de}{\color{gray}@uni-hd.de}\\
+     \href{http://.uni-hd.de}{\color{gray}http://.uni-hd.de}
+     \end{flushright}
+}};
+\tikz [remember picture,overlay]
+\node [
+shift={(-34.01mm,19.12mm)}
+]
+     at (current page.south east)
+     {\parbox{4.4cm}{
+     \color{gray}
+     \sffamily
+     \scriptsize
+     \begin{flushleft}
+     Fachschaft Info\\
+     Im Neuenheimer Feld 205\\
+     Raum 01.301\\
+69120 Heidelberg
+     \end{flushleft}
+}};
+}
+\def\SetPageNumber{
+\tikz [remember picture,overlay]
+\node [shift={(53.5mm,-42.98mm)}]
+     at (current page.north west)
+     {\parbox{4.4cm}{\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
+}
+
+\rohead{\SetLogo\SetPageNumber}
+\rofoot{\SetFooter}{}
+\lefoot{}
+
+\let\oldmaketitle\maketitle
+\def\maketitle{\oldmaketitle\thispagestyle{scrheadings}}
+
+\DeclareUnicodeCharacter{20AC}{\euro}
+
+\renewcommand\thesection{TOP \arabic{section}:}
+\renewcommand\contentsname{Tagesordnung}
+\newenvironment{antrag}{\begin{quote}\begin{itshape}}{\end{itshape}\end{quote}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+    \input{titlepage.tex}
+    \tableofcontents
+    \input{opening.tex}
+    \input{Redezeitbegrenzung.tex}
+    \input{wahlen.tex}
+    \input{satzungen.tex}
+    \input{diskussionen.tex}
+    \input{finanzen.tex}
+    \input{infos}
+\end{document}
