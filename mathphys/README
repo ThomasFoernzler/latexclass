@@ -1,0 +1,41 @@
+==================================================================================
+     The MathPhys LaTeX Classes (mathphys-article/letter)
+==================================================================================
+
+You shold have recieved at least the following files to be
+able to use the mathphys-article and mathphys-letter class:
+     mathphys-article.dtx
+     mathphys-letter.dtx
+     imp-letter.dtx
+     MathPhysLogo.pdf
+     MathPhysLogoInfo.pdf
+     MathPhysLogoMathe.pdf
+     MathPhysLogoMathInf.pdf
+     MathPhysLogoPhysik.pdf
+     MathPhysLogoIMP.pdf
+     and this README
+
+To get the .cls files and pdf documentation simply run twice
+
+  pdflatex mathphys-article.dtx
+  pdflatex mathphys-letter.dtx
+  pdflatex imp-letter.dtx
+
+The derived .cls file as well as files MathPhysLogo*.pdf
+should be moved to a place where TeX can find them. Either 
+save them somewhere in your TeX-PATH or in the directory where
+the documents will be stored.
+
+Mac-Users: simply move all the files to
+/Users/putYourUsernameHere/Library/texmf/tex/latex/putYourDirectoryNameHere
+and then run >>sudo texhash<<. This works at least with Texlive2017.
+You may have to install some stuff, which you will be prompted to do on the
+console, in order to run texhash. If this doesn't work, you can try and find
+out where your $TEXMFHOME (your texpath file on mac) variable is pointing by
+running >>tlmgr config<< and looking for it in the output on the console.
+
+==================================================================================
+Copyright (C) 2014–2016 by Moritz Brinkmann <mo@uni-hd.de>
+              2017-2018 by Maximilian Jalea <max@mathphys.stura.uni-heidelberg.de>
+                   2018 by Stefan Mayer <smayer@mathphys.stura.uni-heidelberg.de>
+==================================================================================
