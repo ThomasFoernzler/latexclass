@@ -12,6 +12,7 @@
     xcolor,
     hyperref,
     microtype,
+    tabularx,
 }
 \usepackage[mono=false]{libertine}
 \usepackage[ngerman]{babel}
@@ -21,6 +22,7 @@
 a4paper,
 top=5cm,
 bottom=4cm,
+width=16cm
 }
 \pagestyle{scrheadings}
 \hypersetup{
@@ -29,41 +31,55 @@ pdfborder={0 0 0},
 
 \def\SetLogo{
 \tikz [remember picture,overlay]
-\node [shift={(-46.15mm,-19.12mm)}]
+\node [shift={(-46.15mm,-26.5mm)}]
       at (current page.north east)
-         {\includegraphics%[width=92.29mm, height=38.24mm]
+         {\includegraphics[width=40mm, height=13mm]
          {../logo.png}};
 }
 \def\SetFooter{
 \tikz [remember picture,overlay]
-\node [shift={(-50mm,19.12mm)}]
+\node [shift={(-65mm,30mm)}]
      at (current page.south east)
      {\parbox{8cm}{
           \begin{flushright}
+               \textcolor{gray}{
                \eventnumber. SturaSitzung am \datum \\
                Alber-Ueberle-Stra\ss e 3-5. 69120 Heidelberg (DE)
+               }
           \end{flushright}
 
 }};
 }
 \def\SetPageNumber{
 \tikz [remember picture,overlay]
-\node [shift={(53.5mm,-42.98mm)}]
+\node [shift={(50mm,30mm)}]
+     at (current page.south west)
+     {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
+}
+\def\SetLegislatur{
+     \tikz [remember picture,overlay]
+     \node [shift={(50mm,-20mm)}]
      at (current page.north west)
-     {\parbox{4.4cm}{\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
+     {\parbox{5cm}{\textcolor{gray}{8. Legislaturperiode}}};
 }
 
-\rohead{\SetLogo\SetPageNumber}
-\rofoot{\SetFooter}{}
-\lefoot{}
+\ihead*{\SetLegislatur}
+\chead*{}
+\ohead*{\SetLogo\SetPageNumber}
+
+\ofoot*{\SetFooter}
+\cfoot*{}
+\ifoot*{}
+
+\pagestyle{plain.scrheadings}
 
 \let\oldmaketitle\maketitle
 \def\maketitle{\oldmaketitle\thispagestyle{scrheadings}}
 
 \DeclareUnicodeCharacter{20AC}{\euro}
 
-\renewcommand\thesection{TOP \arabic{section}:}
-\renewcommand\contentsname{Tagesordnung}
+\AtBeginDocument{\renewcommand{\contentsname}{Tagesordnung}}
+
 \newenvironment{antrag}{\begin{quote}\begin{itshape}}{\end{itshape}\end{quote}}
 
 \setlength{\parindent}{0pt}
@@ -71,6 +87,37 @@ pdfborder={0 0 0},
 
 \def\eventnumber{122}
 \def\datum{1.12.2020}
+\def\abstimmungsergebnis#1#2#3#4{
+     \begin{center}
+          \begin{tabular}{|m{8cm}|m{1cm}|m{1cm}|m{2cm}|}
+               \hline
+               TOP-Titel & Ja & Nein & Enthaltung\\\hline
+               #1 & #2 & #3 & #4\\\hline
+          \end{tabular}
+     \end{center}
+}
+\def\antrag#1#2#3#4#5#6#7#8#9{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9ent,
+     \subsection{#1 (#2)}
+     Antragssteller: #3
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #4
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #5
+     \paragraph{Diskussion:}\phantom{spacer}\\
+     #6
+     \paragraph{Abstimmungsergebnis}
+     \abstimmungsergebnis{#1}{#7}{#8}{#9}
+}
+\def\diskussion#1#2#3#4#5#6{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion
+     \subsection{#1 (#2)}
+     Antragssteller: #3
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #4
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #5
+     \paragraph{Diskussion:}\phantom{spacer}\\
+     #6
+}
 
 \begin{document}
     \input{titlepage.tex}
