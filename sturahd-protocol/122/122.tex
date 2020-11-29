@@ -27,6 +27,10 @@ width=16cm
 \pagestyle{scrheadings}
 \hypersetup{
 pdfborder={0 0 0},
+colorlinks=true,
+linkcolor=black,
+filecolor=magenta,      
+urlcolor=cyan,
 }
 
 \def\SetLogo{
@@ -54,7 +58,7 @@ pdfborder={0 0 0},
 \tikz [remember picture,overlay]
 \node [shift={(50mm,30mm)}]
      at (current page.south west)
-     {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref{LastPage}}}};
+     {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref*{LastPage}}}};
 }
 \def\SetLegislatur{
      \tikz [remember picture,overlay]
@@ -87,6 +91,10 @@ pdfborder={0 0 0},
 
 \def\eventnumber{122}
 \def\datum{1.12.2020}
+
+\def\kandidaturenseite{\href{https://www.stura.uni-heidelberg.de/kandidaturen}{Kandidaturenwebsite}}
+
+
 \def\abstimmungsergebnis#1#2#3#4{
      \begin{center}
           \begin{tabular}{|m{8cm}|m{1cm}|m{1cm}|m{2cm}|}
@@ -118,6 +126,15 @@ pdfborder={0 0 0},
      \paragraph{Diskussion:}\phantom{spacer}\\
      #6
 }
+\def\wahl#1#2#3#4#5{%1titel,2lesung,3kandidaten,4text,5diskussion
+     \subsection{#1 (#2)}
+     Kandidaten: #3
+     \paragraph{Kandidaturtext:}\phantom{spacer}\\
+     #4
+     \paragraph{Diskussion:}\phantom{spacer}\\
+     #5
+}
+
 
 \begin{document}
     \input{titlepage.tex}
