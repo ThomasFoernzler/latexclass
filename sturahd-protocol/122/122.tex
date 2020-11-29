@@ -134,7 +134,17 @@ urlcolor=cyan,
      \paragraph{Diskussion:}\phantom{spacer}\\
      #5
 }
-
+\def\GOantrag#1#2#3#4#5#6#7#8{%1titel,2antragssteller,3text,4begründung,5gegenrede,6ja,7nein,8enth
+     \subsection{GO-Antrag: #1}
+     Antragssteller: #2
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #3
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #4
+     \paragraph{Gegenrede:}\phantom{spacer}\\
+     #5
+     \abstimmungsergebnis{GO:Antrag: #1}{#6}{#7}{#8}
+}
 
 \begin{document}
     \input{titlepage.tex}
