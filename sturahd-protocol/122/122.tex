@@ -13,6 +13,8 @@
     hyperref,
     microtype,
     tabularx,
+    makecell,
+    longtable,
 }
 \usepackage[mono=false]{libertine}
 \usepackage[ngerman]{babel}
@@ -33,14 +35,14 @@ filecolor=magenta,
 urlcolor=cyan,
 }
 
-\def\SetLogo{
+\newcommand{\SetLogo}{
 \tikz [remember picture,overlay]
 \node [shift={(-46.15mm,-26.5mm)}]
       at (current page.north east)
          {\includegraphics[width=40mm, height=13mm]
          {../logo.png}};
 }
-\def\SetFooter{
+\newcommand{\SetFooter}{
 \tikz [remember picture,overlay]
 \node [shift={(-65mm,30mm)}]
      at (current page.south east)
@@ -54,13 +56,13 @@ urlcolor=cyan,
 
 }};
 }
-\def\SetPageNumber{
+\newcommand{\SetPageNumber}{
 \tikz [remember picture,overlay]
 \node [shift={(50mm,30mm)}]
      at (current page.south west)
      {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref*{LastPage}}}};
 }
-\def\SetLegislatur{
+\newcommand{\SetLegislatur}{
      \tikz [remember picture,overlay]
      \node [shift={(50mm,-20mm)}]
      at (current page.north west)
@@ -84,18 +86,16 @@ urlcolor=cyan,
 
 \AtBeginDocument{\renewcommand{\contentsname}{Tagesordnung}}
 
-\newenvironment{antrag}{\begin{quote}\begin{itshape}}{\end{itshape}\end{quote}}
-
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
-\def\eventnumber{122}
-\def\datum{1.12.2020}
+\newcommand{\eventnumber}{122}
+\newcommand{\datum}{1.12.2020}
 
-\def\kandidaturenseite{\href{https://www.stura.uni-heidelberg.de/kandidaturen}{Kandidaturenwebsite}}
+\newcommand{\kandidaturenseite}{\href{https://www.stura.uni-heidelberg.de/kandidaturen}{Kandidaturenwebsite}}
 
 
-\def\abstimmungsergebnis#1#2#3#4{
+\newcommand{\abstimmungsergebnis}[4]{
      \begin{center}
           \begin{tabular}{|m{8cm}|m{1cm}|m{1cm}|m{2cm}|}
                \hline
@@ -104,7 +104,7 @@ urlcolor=cyan,
           \end{tabular}
      \end{center}
 }
-\def\antrag#1#2#3#4#5#6#7#8#9{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9ent,
+\newcommand{\antrag}[9]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9ent,
      \subsection{#1 (#2)}
      Antragssteller: #3
      \paragraph{Antragstext:}\phantom{spacer}\\
@@ -116,7 +116,7 @@ urlcolor=cyan,
      \paragraph{Abstimmungsergebnis}
      \abstimmungsergebnis{#1}{#7}{#8}{#9}
 }
-\def\diskussion#1#2#3#4#5#6{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion
+\newcommand{\diskussion}[6]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion
      \subsection{#1 (#2)}
      Antragssteller: #3
      \paragraph{Antragstext:}\phantom{spacer}\\
@@ -126,7 +126,7 @@ urlcolor=cyan,
      \paragraph{Diskussion:}\phantom{spacer}\\
      #6
 }
-\def\wahl#1#2#3#4#5{%1titel,2lesung,3kandidaten,4text,5diskussion
+\newcommand{\wahl}[5]{%1titel,2lesung,3kandidaten,4text,5diskussion
      \subsection{#1 (#2)}
      Kandidaten: #3
      \paragraph{Kandidaturtext:}\phantom{spacer}\\
@@ -134,7 +134,7 @@ urlcolor=cyan,
      \paragraph{Diskussion:}\phantom{spacer}\\
      #5
 }
-\def\GOantrag#1#2#3#4#5#6#7#8{%1titel,2antragssteller,3text,4begründung,5gegenrede,6ja,7nein,8enth
+\newcommand{\GOantrag}[8]{%1titel,2antragssteller,3text,4begründung,5gegenrede,6ja,7nein,8enth
      \subsection{GO-Antrag: #1}
      Antragssteller: #2
      \paragraph{Antragstext:}\phantom{spacer}\\
