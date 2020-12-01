@@ -21,6 +21,9 @@
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+
+\usepackage[all]{nowidow}
+
 \geometry{
 a4paper,
 top=5cm,
@@ -85,8 +88,10 @@ urlcolor=cyan,
 
 \DeclareUnicodeCharacter{20AC}{\euro}
 
-\AtBeginDocument{\renewcommand{\contentsname}{Tagesordnung}}
 
+
+\AtBeginDocument{\renewcommand{\contentsname}{Tagesordnung}}
+\renewcommand{\arraystretch}{1.7}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
@@ -149,7 +154,6 @@ urlcolor=cyan,
 
 \begin{document}
     \input{titlepage.tex}
-    \tableofcontents
     \input{opening.tex}
     \input{Redezeitbegrenzung.tex}
     \input{wahlen.tex}
