@@ -90,7 +90,7 @@ urlcolor=cyan,
 
 
 
-\AtBeginDocument{\renewcommand{\contentsname}{Tagesordnung}}
+\AtBeginDocument{\renewcommand{\contentsname}{\vspace{-3em}}} % is right under subsection, doesnt need extra heading
 \renewcommand{\arraystretch}{1.7}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
@@ -100,8 +100,18 @@ urlcolor=cyan,
 
 \newcommand{\kandidaturenseite}{\href{https://www.stura.uni-heidelberg.de/kandidaturen}{Kandidaturenwebsite}}
 
+%generate a costum listcommand for compact discussions with the 2nd level being an arrow indicating a response
+%     \ul{
+%          \li{1 level}
+%          \li{still 1 level}
+%          \ul{\lii{2 level}}
+%          \li{1 level again}
+%     }
+\newcommand{\ul}[1]{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}#1\end{itemize}}
+\newcommand{\li}[1]{\item[\textbullet]{#1}} 
+\newcommand{\lii}[1]{\item[\MVRightarrow]{#1}} 
 
-\newcommand{\abstimmungsergebnis}[4]{
+\newcommand{\abstimmungsergebnis}[4]{%1titel,2ja,3nein,4enth
      \begin{center}
           \begin{tabular}{|m{8cm}|m{1cm}|m{1cm}|m{2cm}|}
                \hline
@@ -110,14 +120,14 @@ urlcolor=cyan,
           \end{tabular}
      \end{center}
 }
-\newcommand{\antrag}[9]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9ent,
+\newcommand{\antrag}[9]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9enth
      \subsection{#1 (#2)}
      Antragssteller: #3
      \paragraph{Antragstext:}\phantom{spacer}\\
      #4
      \paragraph{Begründung:}\phantom{spacer}\\
      #5
-     \paragraph{Diskussion:}\phantom{spacer}\\
+     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
      #6
      \paragraph{Abstimmungsergebnis}
      \abstimmungsergebnis{#1}{#7}{#8}{#9}
@@ -129,7 +139,7 @@ urlcolor=cyan,
      #4
      \paragraph{Begründung:}\phantom{spacer}\\
      #5
-     \paragraph{Diskussion:}\phantom{spacer}\\
+     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
      #6
 }
 \newcommand{\wahl}[5]{%1titel,2lesung,3kandidaten,4text,5diskussion
@@ -141,7 +151,7 @@ urlcolor=cyan,
      #5
 }
 \newcommand{\GOantrag}[8]{%1titel,2antragssteller,3text,4begründung,5gegenrede,6ja,7nein,8enth
-     \subsection{GO-Antrag: #1}
+     \subsubsection{GO-Antrag: #1}
      Antragssteller: #2
      \paragraph{Antragstext:}\phantom{spacer}\\
      #3
