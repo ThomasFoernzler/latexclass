@@ -118,9 +118,9 @@ urlcolor=cyan,
 
 \newcommand{\abstimmungsergebnis}[4]{%1titel,2ja,3nein,4enth
      \begin{center}
-          \begin{tabular}{|m{8cm}|m{1cm}|m{1cm}|m{2cm}|}
+          \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
                \hline
-               TOP-Titel & Ja & Nein & Enthaltung\\\hline
+               TOP-Titel & Ja & Nein & Enth\\\hline
                #1 & #2 & #3 & #4\\\hline
           \end{tabular}
      \end{center}
@@ -163,7 +163,13 @@ urlcolor=cyan,
      #3
      \paragraph{Gegenrede:}\phantom{spacer}\\
      #4
-     \abstimmungsergebnis{GO:Antrag: #8}{#5}{#6}{#7}
+     \begin{center}
+          \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
+               \hline
+               Ergebnis & Ja & Nein & Enth\\\hline
+               \MVRightarrow\ #8 & #5 & #6 & #7\\\hline
+          \end{tabular}
+     \end{center}
 }
 
 \begin{document}
