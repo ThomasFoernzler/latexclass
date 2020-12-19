@@ -73,6 +73,17 @@ urlcolor=cyan,
 \newcommand{\li}[1]{\item[\textbullet]{#1}} 
 \newcommand{\lii}[1]{\item[\MVRightarrow]{#1}} 
 
+
+\newcommand{\noli}[1]{\item[]{#1}} % blank item for deeper level of list (prevents error, when no items in 1 level but items in 2 level)
+%\ul{
+%     \ul{\lii{test}}
+%} This would make an error
+%\ul{
+%     \noli{
+%          \ul{\lii{test}}
+%    }
+%} This will not throw an error and keep the first level without an item bullet
+
 \newcommand{\abstimmungsergebnis}[4]{%1titel,2ja,3nein,4enth
      \begin{center}
           \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}

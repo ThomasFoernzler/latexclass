@@ -7,25 +7,27 @@
 
 ### 2.2.2 Verschieben von Finanzanträgen vor die Wahlen
 - formale Gegenrede für Abstimmung
-  - Angenommen mit 30/6/7
+   - Angenommen mit 30/6/7
 
 
 ## Protokolle
+
+### Protokoll 122
 - Einwand auf Rechtsschreibfehler in letzten Protokollen
-  - Man will darauf in der Zukunft genauer achten
+   - Man will darauf in der Zukunft genauer achten
 
 ## Berichte
 
 ### Nextbike
 - Es gab ein öffentliches Treffen mit dem Verkehrsreferat bei dem keine:r da war und der Raum nicht geöffnet wurde.
-   -Entschuldigung des Verkehrsreferats dafür
-   
+   - Entschuldigung des Verkehrsreferats dafür
+
 ### Vorsitz
 - Sind in der Infomail an die Erstsemester auch Informationen dass sie BigBlueButton nutzen können.
    - Das ist nicht der Sinn der Mail. Diese soll weniger auf dieser sachlichen Ebene sein. Aber darüber gibt es noch Informationen an alle Studierenden.
 - Wo ist genau der Unterschied zwischen dem bbb- StuRa Zugang und dem RefKonf-Zugang? Welchen soll man jetzt als studentische Gruppe nutzen?
    - Es gibt keinen RefKonf-Zugang. Man soll als studentische Gruppe BigBlueButton nutzen.
-   
+
 ### Treffen zur StuRa-Sondersitzung zu Corona
 - Informationen an welche Personen man sich bei Problemen wenden kann und Lernorte sollte man coronakonform überdenken. Wie hoch sollte die Teilnehmendenzahl sein.
    - Es ist keine Vollversammlung geplant, sondern eine außerordentliche StuRa-Sitzung. Man will es im Rahmen des Stura's machen für Legitimation und Struktur.
@@ -42,7 +44,7 @@
 - deutlich mehr Stimmen dafür als dagegen
 
 ### Meinungsbild über die Richtung in die die Sondersitzung gehen soll 
-  - 35 Stimmen für politische Forderungen zu erarbeiten 17 für inneruniversitären Austausch 
+   - 35 Stimmen für politische Forderungen zu erarbeiten 17 für inneruniversitären Austausch 
 
 ### GO Verfahrensvorschlag
    - angenommen 
@@ -128,7 +130,7 @@
 
 ### 5.1 Kandidatur für das Referat für politische Bildung (2. Lesung) 
 - Wieviel Wissen gibt es bei den Aufgaben und Pflichten von Referent:innen
-   -(Janek) Es gibt sehr viel Anträge schreiben. Der Vorteil ist, dass er von Felix sehr gut eingearbeitet werden kann. 
+   - (Janek) Es gibt sehr viel Anträge schreiben. Der Vorteil ist, dass er von Felix sehr gut eingearbeitet werden kann. 
    - (Felix)Einreichen von Berichten, stellen von Anträgen
 - Die Antworten waren nicht ganz zufriedenstellend.
    - (Felix) Die Frage war falsch verstanden worden. Sie wollen mehr Arbeitsteilung machen um die Aufgaben zu 
@@ -137,15 +139,14 @@
    - (Felix)Bei Vorträgen will man eine Gleichstellung von Frauen und Männern erreichen. Er verweißt darauf, dass er es schon oft in seinem Umfeld Komilitoninnen dafür begeistern versucht hatte.
    - Felix wurde gewählt
    - Janek wurde gewählt
-   
+
 ### 5.2 Kandidatur für das Referat für Kultur und Sport (2. Lesung) 
 - Wie kann man die Arbeit während Corona gut führen?
    - Virtuelle Lesekreise sind möglich. Information zu Büchern könnte man bereitstellen. Das Frankfurter Stillenmuseum könnte man um Kooperationen anfragen, um Kultur für die Studierenden bereitzustellen.
-   - 
 
 ### 5.3 Kandidatur für das Referat Antirassismus (2. Lesung)
 - Jemand von der LHG war Mitglied in der Whatsapp Gruppe. In dieser wurde anscheinend gewaltverherrlichende Aussagen getätigt. 
-   -Diese Person war anscheinend als der Vorfall mit der Normannia war nicht begeistert darüber, dass man dagegen etwas übernehmen wollte. 
+   - Diese Person war anscheinend als der Vorfall mit der Normannia war nicht begeistert darüber, dass man dagegen etwas übernehmen wollte. 
 
 ### 5.4 Kandidatur für das Referat für Kultur und Sport (2. Lesung) 
 - keine Fragen
@@ -159,7 +160,7 @@
 - Wie genau würden sie sich einbringen wollen.
    - Sie würden sich mit der Lehre auseinandersetzen und die Studierenden am besten vertreten.
    - Sie wollen darauf schauen ob diese Person eine gute Lehre macht, aber durch die Arbeit selber zeigt sich auf was es ankommt.
-   
+
 ### 5.7 Zusammenfassung 
 
 ## Diskussionen
@@ -183,9 +184,6 @@
 - Was ist der Weg nach diesem Antrag? Will man sich danach sich an das URZ wenden? Will man dagegen klagen?
 - Man könnte den Antrag in den Senat einbringen, weil deren Entscheidung weitreichender ist.
 - Die Vorsitzenden der VS bieten an sich mit dem URZ zu treffen und darüber zu reden.
-    - diese Entscheidung wird begrüßt.
-- Was ist wenn man in einer Heiconf die Namen nicht sieht.
-    - Bei Heiconf hat man die Möglichkeit zu bestimmen, wie man sich nennen will und deswegen geht das konform.
-
-https://sitzungen.sturahd.de/ buggt gerade bei mir deswegen wäre es gut wenn jemand die gewählt mit ... Sachen nachtragen könnte :D
-Ja passt des machen wir
+   - diese Entscheidung wird begrüßt.
+   - Was ist wenn man in einer Heiconf die Namen nicht sieht.
+   - Bei Heiconf hat man die Möglichkeit zu bestimmen, wie man sich nennen will und deswegen geht das konform.
