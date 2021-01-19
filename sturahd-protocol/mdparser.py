@@ -8,6 +8,7 @@ out = open(sitzung + "-protokoll" + "/" + sitzung + "-discussion.tex", "w")
 
 firsttime = True
 alsofirsttime = True
+diretlyfollowing = False
 
 for num, line in enumerate(raw, start=1 ):
     if line == "\n":
@@ -23,16 +24,17 @@ for num, line in enumerate(raw, start=1 ):
         diretlyfollowing = True
         continue
     if line[0:4] == "### ":
-        if diretlyfollowing == True:
-            out.write("\n")
-            out.write(line[4:])
-            out.write(r"\textbf{X. Lesung}"+"\n"+r"\ul{"+ "\n")
-            diretlyfollowing = False
         if diretlyfollowing == False:
             out.write("}\n\n")       
             out.write(line[4:])
-            out.write(r"\textbf{X. Lesung}"+"\n"+r"\ul{"+ "\n")
-        continue
+            out.write(r"\textbf{X. Lesung:}"+"\n"+r"\ul{"+ "\n")
+            continue
+        if diretlyfollowing == True:
+            out.write("\n")
+            out.write(line[4:])
+            out.write(r"\textbf{X. Lesung:}"+"\n"+r"\ul{"+ "\n")
+            diretlyfollowing = False
+            continue
     if line[0:2] == "- ":
         out.write("\t" + r"\li{" + line[2:-1] + "}\n")
         continue
@@ -40,7 +42,7 @@ for num, line in enumerate(raw, start=1 ):
         out.write("\t\t" + r"\noli{" + r"\ul{" + "\n" + "\t\t"+ r"\lii{"+ line[5:-1] + "\n" + "\t\t" + r"}}}" + "\n")
         continue
     else:
-        # out.write(line)
+        out.write(line)
         print("weird behavior in line " , num)
 out.write("}")
 

@@ -1,0 +1,153 @@
+%edge margin
+\geometry{
+a4paper,
+top=5cm,
+bottom=4cm,
+width=16cm
+}
+\pagestyle{scrheadings}
+\hypersetup{
+pdfborder={0 0 0},
+colorlinks=true,
+linkcolor=black,
+filecolor=magenta,      
+urlcolor=cyan,
+}
+
+\newcommand{\SetLogo}{
+\tikz [remember picture,overlay]
+\node [shift={(-46.15mm,-26.5mm)}]
+      at (current page.north east)
+         {\includegraphics[width=40mm, height=13mm]
+         {../logo.png}};
+}
+\newcommand{\SetFooter}{
+\tikz [remember picture,overlay]
+\node [shift={(-65mm,30mm)}]
+     at (current page.south east)
+     {\parbox{8cm}{
+          \begin{flushright}
+               \textcolor{gray}{
+               \eventnumber. SturaSitzung am \datum \\
+               Alber-Ueberle-Straß e 3-5. 69120 Heidelberg (DE)}
+          \end{flushright}
+
+}};
+}
+\newcommand{\SetPageNumber}{
+\tikz [remember picture,overlay]
+\node [shift={(50mm,30mm)}]
+     at (current page.south west)
+     {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref*{LastPage}}}};
+}
+\newcommand{\SetLegislatur}{
+     \tikz [remember picture,overlay]
+     \node [shift={(50mm,-20mm)}]
+     at (current page.north west)
+     {\parbox{5cm}{\textcolor{gray}{8. Legislaturperiode}}};
+}
+
+\ihead*{\SetLegislatur}
+\chead*{}
+\ohead*{\SetLogo\SetPageNumber}
+
+\ofoot*{\SetFooter}
+\cfoot*{}
+\ifoot*{}
+
+\pagestyle{plain.scrheadings}
+
+\let\oldmaketitle\maketitle
+\def\maketitle{\oldmaketitle\thispagestyle{scrheadings}}
+
+\newcommand{\kandidaturenseite}{\href{https://www.stura.uni-heidelberg.de/kandidaturen}{Kandidaturenwebsite}}
+
+%generate a costum listcommand for compact discussions with the 2nd level being an arrow indicating a response
+%     \ul{
+%          \li{1 level}
+%          \li{still 1 level}
+%          \ul{\lii{2 level}}
+%          \li{1 level again}
+%     }
+\newcommand{\ul}[1]{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}#1\end{itemize}}
+\newcommand{\li}[1]{\item[\textbullet]{#1}} 
+\newcommand{\lii}[1]{\item[\MVRightarrow]{#1}} 
+
+
+\newcommand{\noli}[1]{\item[]{#1}} % blank item for deeper level of list (prevents error, when no items in 1 level but items in 2 level)
+%\ul{
+%     \ul{\lii{test}}
+%} This would make an error
+%\ul{
+%     \noli{
+%          \ul{\lii{test}}
+%    }
+%} This will not throw an error and keep the first level without an item bullet
+
+\newcommand{\abstimmungsergebnis}[4]{%1titel,2ja,3nein,4enth
+     \begin{center}
+          \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
+               \hline
+               TOP-Titel & Ja & Nein & Enth\\\hline
+               #1 & #2 & #3 & #4\\\hline
+          \end{tabular}
+     \end{center}
+}
+\newcommand{\antrag}[9]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9enth
+     \subsection{#1 (#2)}
+     Antragssteller: #3
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #4
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #5
+     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
+     #6
+     \paragraph{Abstimmungsergebnis}
+     \abstimmungsergebnis{#1}{#7}{#8}{#9}
+}
+\newcommand{\diskussion}[6]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion
+     \subsection{#1 (#2)}
+     Antragssteller: #3
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #4
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #5
+     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
+     #6
+}
+\newcommand{\wahl}[5]{%1titel,2lesung,3kandidaten,4text,5diskussion
+     \subsection{#1 (#2)}
+     Kandidaten: #3
+     \paragraph{Kandidaturtext:}\phantom{spacer}\\
+     #4
+     \paragraph{Diskussion:}\phantom{spacer}\\
+     #5
+}
+\newcommand{\GOantrag}[8]{%1titel,2text,3begründung,4gegenrede,5ja,6nein,7enth,8angenommen/abgelehnt
+     \subsubsection{GO-Antrag: #1}
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #2
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #3
+     \paragraph{Gegenrede:}\phantom{spacer}\\
+     #4
+     \begin{center}
+          \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
+               \hline
+               Ergebnis & Ja & Nein & Enth\\\hline
+               \MVRightarrow\ #8 & #5 & #6 & #7\\\hline
+          \end{tabular}
+     \end{center}
+}
+\newcommand{\aenderungsantrag}[9]{%1originalltitel,2antragssteller,3antragstext,4begründung,5diskussion,6ja,7nein,8enth
+     \subsubsection{Änderungsantrag: #1}
+     Antragssteller: #2
+     \paragraph{Antragstext:}\phantom{spacer}\\
+     #3
+     \paragraph{Begründung:}\phantom{spacer}\\
+     #4
+     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
+     #5
+     \paragraph{Abstimmungsergebnis}
+     \abstimmungsergebnis{#1}{#6}{#7}{#8}
+}
