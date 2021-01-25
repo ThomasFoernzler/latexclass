@@ -9,7 +9,7 @@ width=16cm
 \hypersetup{
 pdfborder={0 0 0},
 colorlinks=true,
-linkcolor=black,
+linkcolor=blue,
 filecolor=magenta,      
 urlcolor=cyan,
 }
@@ -85,71 +85,70 @@ urlcolor=cyan,
 %} This will not throw an error and keep the first level without an item bullet
 
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\} %This Paragraph doesnt start in the same line
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{ \nameref*{#1}}}
+\renewcommand{\subsectionautorefname}{Antrag}
 
-\newcommand{\abstimmungsergebnis}[4]{%1titel,2ja,3nein,4enth
+\newcommand{\old}[1]{\textcolor{red}{\sout{#1}}}
+
+\newcommand{\abstimmungsergebnis}[5]{%1titel,2ja,3nein,4enth,5ergebnis
      \begin{center}
           \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
                \hline
-               TOP-Titel & Ja & Nein & Enth\\\hline
-               #1 & #2 & #3 & #4\\\hline
+               #1 & Ja & Nein & Enth\\\hline
+               \MVRightarrow\ #5 & #2 & #3 & #4\\\hline
           \end{tabular}
      \end{center}
 }
-\newcommand{\antrag}[9]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7ja,8nein,9enth
+\newcommand{\antrag}[7]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7abstimmung
      \subsection{#1 (#2)}
      Antragsstellend: #3
-     \paragraph{Antragstext:}\phantom{spacer}\\
+     \myparagraph{Antragstext:}
      #4
-     \paragraph{Begründung:}\phantom{spacer}\\
+     \myparagraph{Begründung:}
      #5
-     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
+     \myparagraph{Diskussion:}
      #6
-     \paragraph{Abstimmungsergebnis}
-     \abstimmungsergebnis{#1}{#7}{#8}{#9}
+     \myparagraph{Abstimmung:}
+     #7
 }
 \newcommand{\diskussion}[6]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion
      \subsection{#1 (#2)}
      Antragsstellend: #3
-     \paragraph{Antragstext:}\phantom{spacer}\\
+     \myparagraph{Antragstext:}
      #4
-     \paragraph{Begründung:}\phantom{spacer}\\
+     \myparagraph{Begründung:}
      #5
-     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
+     \myparagraph{Diskussion:}
      #6
 }
 \newcommand{\wahl}[5]{%1titel,2lesung,3kandidaten,4text,5diskussion
      \subsection{#1 (#2)}
      Kandidaten: #3
-     \paragraph{Kandidaturtext:}\phantom{spacer}\\
+     \myparagraph{Kandidaturtext:}
      #4
-     \paragraph{Diskussion:}\phantom{spacer}\\
+     \myparagraph{Diskussion:}
      #5
 }
-\newcommand{\GOantrag}[8]{%1titel,2text,3begründung,4gegenrede,5ja,6nein,7enth,8angenommen/abgelehnt
+\newcommand{\GOantrag}[5]{%1titel,2text,3begründung,4gegenrede,5abstimmung
      \subsubsection{GO-Antrag: #1}
-     \paragraph{Antragstext:}\phantom{spacer}\\
+     \myparagraph{Antragstext:}
      #2
-     \paragraph{Begründung:}\phantom{spacer}\\
+     \myparagraph{Begründung:}
      #3
-     \paragraph{Gegenrede:}\phantom{spacer}\\
+     \myparagraph{Gegenrede:}
      #4
-     \begin{center}
-          \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
-               \hline
-               Ergebnis & Ja & Nein & Enth\\\hline
-               \MVRightarrow\ #8 & #5 & #6 & #7\\\hline
-          \end{tabular}
-     \end{center}
-}
-\newcommand{\aenderungsantrag}[9]{%1originalltitel,2antragssteller,3antragstext,4begründung,5diskussion,6ja,7nein,8enth
-     \subsubsection{Änderungsantrag: #1}
-     Antragsstellend: #2
-     \paragraph{Antragstext:}\phantom{spacer}\\
-     #3
-     \paragraph{Begründung:}\phantom{spacer}\\
-     #4
-     \paragraph{Diskussion:}\phantom{spacer}\\[1em]
+     \myparagraph{Abstimmung:}
      #5
-     \paragraph{Abstimmungsergebnis}
-     \abstimmungsergebnis{#1}{#6}{#7}{#8}
+}
+\newcommand{\aenderungsantrag}[6]{%1originalltitel,2antragssteller,3antragstext,4begründung,5diskussion,6abstimmung
+     \subsubsection{Änderungsantrag #1}
+     Antragsstellend: #2
+     \myparagraph{Antragstext:}
+     #3
+     \myparagraph{Begründung:}
+     #4
+     \myparagraph{Diskussion:}
+     #5
+     \myparagraph{Abstimmung:}
+     #6
 }

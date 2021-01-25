@@ -1,0 +1,64 @@
+{
+    "antrag":{
+        "prefix": ["antrag", "lan"],
+        "scope": "latex",
+        "body": [
+            "\\antrag{${0:Antragstitel}}{1. Lesung}{Antragsstellend}",
+            "{",
+                "\t%Antragstext",
+            "}{",
+                "\t%Begründung",
+            "}{",
+                "\t%Diskussion",
+            "}{", 
+                "\t\\abstimmungsergebnis{",
+                    "\t\t%Titel",
+                "\t}{",
+                    "\t\ttba%Ja",
+                "\t}{",
+                    "\t\ttba%Nein",
+                "\t}{",
+                    "\t\ttba%Enth",
+                "\t}{",
+                    "\t\ttba%Ergebnis  \\ul{\\noli{\\ul{\\lii{test}}}}",
+                "\t}",
+            "}",
+        ],
+        "description": "Antragstemplate"
+    },
+    "abstimmung":{
+        "prefix": ["abstimmung", "lab"],
+        "scope": "latex",
+        "body": [
+            "\\abstimmungsergebnis{",
+                "\t%Titel",
+            "}{",
+                "\ttba%Ja",
+            "}{",
+                "\ttba%Nein",
+            "}{",
+                "\ttba%Enth",
+            "}{",
+                "\ttba%Ergebnis  \\ul{\\noli{\\ul{\\lii{test}}}}",
+            "}"
+        ],
+        "description": "Abstimmungstemplate"
+    },
+    "diskussion":{
+        "prefix": ["diskussion", "ldi"],
+        "scope": "latex",
+        "body": [
+            "\\antrag{${0:Antragstitel}}{X. Lesung}{Antragsstellend}",
+            "{",
+                "\t%Antragstext",
+            "}{",
+                "\t%Begründung",
+            "}{",
+                "\t%Diskussion",
+            "}{",
+                "\t%Abstimmungsergenbins",
+            "}"
+        ],
+        "description": "Diskussionstemplate"
+    },
+}
