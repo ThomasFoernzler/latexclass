@@ -85,10 +85,13 @@ urlcolor=cyan,
 %} This will not throw an error and keep the first level without an item bullet
 
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\} %This Paragraph doesnt start in the same line
-\newcommand*{\fullref}[1]{\hyperref[{#1}]{ \nameref*{#1}}}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{ \ref{#1} : \nameref*{#1}}}
+
 \renewcommand{\subsectionautorefname}{Antrag}
 
+\newcommand{\new}[1]{\textcolor{ForestGreen}{#1}}
 \newcommand{\old}[1]{\textcolor{red}{\sout{#1}}}
+\newcommand{\replace}[2]{\old{#1}\new{#2}}
 
 \newcommand{\abstimmungsergebnis}[5]{%1titel,2ja,3nein,4enth,5ergebnis
      \begin{center}
