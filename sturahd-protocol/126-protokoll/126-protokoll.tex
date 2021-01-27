@@ -1,0 +1,57 @@
+\NeedsTeXFormat{LaTeX2e}[2007/07/20]
+\documentclass[fontsize=11pt]{scrartcl}[2011/04/02]
+\usepackage[dvipsnames]{xcolor}
+\usepackage{
+    geometry,
+    graphicx,
+    ifthen,
+    kvoptions,
+    lastpage,
+    marvosym,
+    scrlayer-scrpage,
+    tikz,
+    hyperref,
+    microtype,
+    tabularx,
+    makecell,
+    longtable,
+    eurosym,
+    enumitem,
+    datetime
+}
+\usepackage[mono=false]{libertine}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
+\usepackage[all]{nowidow}
+
+
+%some special characters
+\DeclareUnicodeCharacter{20AC}{\euro}
+\DeclareUnicodeCharacter{00DF}{\ss}
+
+\input{commands.tex}
+
+\AtBeginDocument{\renewcommand{\contentsname}{\vspace{-3em}}} % is right under subsection, doesnt need extra heading
+\renewcommand{\arraystretch}{1.7}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\newcommand{\eventnumber}{126}
+\newcommand{\datum}{26.01.2021}
+
+
+
+\begin{document}
+    \input{titlepage.tex}
+    \input{opening.tex}
+    \input{infos}
+    \input{satzungen.tex}
+    \input{wahlen.tex}
+    \input{positionierungen.tex}
+    \input{finanzen.tex}
+    \input{sonstiges.tex}
+    \appendix
+    \input{anhang.tex}
+\end{document}
