@@ -1,0 +1,157 @@
+%edge margin
+\geometry{
+a4paper,
+top=5cm,
+bottom=4cm,
+width=16cm
+}
+\pagestyle{scrheadings}
+\hypersetup{
+pdfborder={0 0 0},
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=cyan,
+}
+
+\newcommand{\SetLogo}{
+\tikz [remember picture,overlay]
+\node [shift={(-46.15mm,-26.5mm)}]
+      at (current page.north east)
+         {\includegraphics[width=40mm, height=13mm]
+         {../logo.png}};
+}
+\newcommand{\SetFooter}{
+\tikz [remember picture,overlay]
+\node [shift={(-65mm,30mm)}]
+     at (current page.south east)
+     {\parbox{8cm}{
+          \begin{flushright}
+               \textcolor{gray}{
+               \eventnumber. SturaSitzung am \datum \\
+               Alber-Ueberle-Straß e 3-5. 69120 Heidelberg (DE)}
+          \end{flushright}
+
+}};
+}
+\newcommand{\SetPageNumber}{
+\tikz [remember picture,overlay]
+\node [shift={(50mm,30mm)}]
+     at (current page.south west)
+     {\parbox{5cm}{\phantom{space}\\\textcolor{gray}{\raggedleft\normalfont \rmfamily Seite \thepage\ von \pageref*{LastPage}}}};
+}
+\newcommand{\SetLegislatur}{
+     \tikz [remember picture,overlay]
+     \node [shift={(50mm,-20mm)}]
+     at (current page.north west)
+     {\parbox{5cm}{\textcolor{gray}{8. Legislaturperiode}}};
+}
+
+\ihead*{\SetLegislatur}
+\chead*{}
+\ohead*{\SetLogo\SetPageNumber}
+
+\ofoot*{\SetFooter}
+\cfoot*{}
+\ifoot*{}
+
+\pagestyle{plain.scrheadings}
+
+\let\oldmaketitle\maketitle
+\def\maketitle{\oldmaketitle\thispagestyle{scrheadings}}
+
+\newcommand{\kandidaturenseite}{\href{https://www.stura.uni-heidelberg.de/kandidaturen}{Kandidaturenwebsite}}
+
+%generate a costum listcommand for compact discussions with the 2nd level being an arrow indicating a response
+%     \ul{
+%          \li{1 level}
+%          \li{still 1 level}
+%          \ul{\lii{2 level}}
+%          \li{1 level again}
+%     }
+\newcommand{\ul}[1]{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}#1\end{itemize}}
+\newcommand{\li}[1]{\item[\textbullet]{#1}} 
+\newcommand{\lii}[1]{\item[\MVRightarrow]{#1}} 
+
+
+\newcommand{\noli}[1]{\item[]{#1}} % blank item for deeper level of list (prevents error, when no items in 1 level but items in 2 level)
+%\ul{
+%     \ul{\lii{test}}
+%} This would make an error
+%\ul{
+%     \noli{
+%          \ul{\lii{test}}
+%    }
+%} This will not throw an error and keep the first level without an item bullet
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\} %This Paragraph doesnt start in the same line
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{ \ref{#1} : \nameref*{#1}}}
+
+\renewcommand{\subsectionautorefname}{Antrag}
+
+\newcommand{\new}[1]{\textcolor{ForestGreen}{#1}}
+\newcommand{\old}[1]{\textcolor{red}{\sout{#1}}}
+\newcommand{\replace}[2]{\old{#1}\new{#2}}
+
+\newcommand{\abstimmungsergebnis}[5]{%1titel,2ja,3nein,4enth,5ergebnis
+     \begin{center}
+          \begin{tabular}{|m{9cm}|m{1cm}|m{1cm}|m{1cm}|}
+               \hline
+               #1 & Ja & Nein & Enth\\\hline
+               \MVRightarrow\ #5 & #2 & #3 & #4\\\hline
+          \end{tabular}
+     \end{center}
+}
+\newcommand{\antrag}[7]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion,7abstimmung
+     \subsection{#1 (#2)}
+     Antragsstellend: #3
+     \myparagraph{Antragstext:}
+     #4
+     \myparagraph{Begründung:}
+     #5
+     \myparagraph{Diskussion:}
+     #6
+     \myparagraph{Abstimmung:}
+     #7
+}
+\newcommand{\diskussion}[6]{%1titel,2lesung,3antragssteller,4antragstext,5begründung,6diskussion
+     \subsection{#1 (#2)}
+     Antragsstellend: #3
+     \myparagraph{Antragstext:}
+     #4
+     \myparagraph{Begründung:}
+     #5
+     \myparagraph{Diskussion:}
+     #6
+}
+\newcommand{\wahl}[5]{%1titel,2lesung,3kandidaten,4text,5diskussion
+     \subsection{#1 (#2)}
+     Kandidaten: #3
+     \myparagraph{Kandidaturtext:}
+     #4
+     \myparagraph{Diskussion:}
+     #5
+}
+\newcommand{\GOantrag}[5]{%1titel,2text,3begründung,4gegenrede,5abstimmung
+     \subsubsection{GO-Antrag: #1}
+     \myparagraph{Antragstext:}
+     #2
+     \myparagraph{Begründung:}
+     #3
+     \myparagraph{Gegenrede:}
+     #4
+     \myparagraph{Abstimmung:}
+     #5
+}
+\newcommand{\aenderungsantrag}[6]{%1originalltitel,2antragssteller,3antragstext,4begründung,5diskussion,6abstimmung
+     \subsubsection{Änderungsantrag zu #1}
+     Antragsstellend: #2
+     \myparagraph{Antragstext:}
+     #3
+     \myparagraph{Begründung:}
+     #4
+     \myparagraph{Diskussion:}
+     #5
+     \myparagraph{Abstimmung:}
+     #6
+}
