@@ -4,7 +4,7 @@
 
 ## 2 Tagesordnung
 ### 2.1 Änderungen an der To
-Keine Änderungsanträge
+- Keine Änderungsanträge
 
 
 ## 3 Protokolle
@@ -14,19 +14,19 @@ Keine Änderungsanträge
 
 ### 4.1 VS in der Vl-freien Zeit
 
-#### Referat für politische Bildung
+### Referat für politische Bildung
 - keine Fragen
 
-#### Referat Lehre und Lernen
+### Referat Lehre und Lernen
 - keine Fragen
 
-#### Außenreferat
+### Außenreferat
 - keine Fragen
 
-#### EDV Referat
+### EDV Referat
 - keine Fragen
 
-#### Referat für hochschulpolitische Vernetzung
+### Referat für hochschulpolitische Vernetzung
 - Es gab die Rückmeldung, dass die Fragen nicht divers genug gestellt waren.
    - Die Rückmeldung wird weitergegeben. 
 
@@ -75,13 +75,13 @@ Keine Änderungsanträge
 - In der Theorie sind zwei Menschen die den Vorsitz machen gut, aber in der Praxis ist dem Stura zuzutrauen hier zwischen Geschlechterrepräsentation und der besten Person zu entscheiden.
 - Die Satzung ist in zweiter Lesung.
 - Wir sollten uns an diesem Thema nicht zu lange aufhalten. Wer ist Antragssteller*in? 
-    - Kirsten, Harald, bei der Wahlordnung die Jusos,
+   - Kirsten, Harald, bei der Wahlordnung die Jusos,
 - Haben alle hier die Sitzungsunterlagen gut durchgelesen? Kann man hier ein Meinungsbild machen?
    - Es ist die Aufgabe der Anwesenden sich diese Sachen durchzulesen.
 - Es steht im Text um divers und in dieser Diskussion ist das auf Geschlecht bezogen. Im Text ist das hingegen sehr schwammig. 
    - Im gerade diskutierten Textabschnitt kommt diese Formulierung nicht vor.
 - Gibt es die Möglichkeit, drei Optionen zu haben? Also neuer Antrag mit altem Text, neuem Text und eben keine Meinung?
-    - Ja man kann Änderungsanträge stellen.
+   - Ja man kann Änderungsanträge stellen.
 - Wenn wir die Quotierung nur anstreben ist das ein Rückschritt. Aber es ist schwierig einen Änderungsantrag hierzu zu schreiben. Deswegen sollten wir uns mit den Referaten zusammensetzen.
 - Eine Quotierung ist grundlegend gut. Aber wir müssen besser Quotierungen umsetzen durch bessere Suche nach quotierten Spitzen.
 - Wir müssen über dieses Thema länger reden. Können wir dieses Thema auf die nächste Sitzung vertagen?
@@ -94,17 +94,18 @@ Keine Änderungsanträge
 - Ist es nicht schweirig den studentischen Senator*innen Stimmrecht zu geben, weil wie ist das mit einem Sturamitglied, das auch studentische*r Senator*in ist. 
    - Der Zweck ist, dass man schneller einreichen will 
 - Zu Senatsmitgliedern in der StuRa Sitzung: Wenn sie für Repräsentation in die Sitzung kommen sollen. Repräsentieren diese den Senat?
-    - Man sollte laut LHG das machen. Die studentischen Senator*innen müssen nicht unbedingt kommen, aber sie würden als Mitglied des Sturas automatisch Auskunft über die Sitzungsunterlagen bekommen. Das löst Verfahrensfragen. 
+   - Man sollte laut LHG das machen. Die studentischen Senator*innen müssen nicht unbedingt kommen, aber sie würden als Mitglied des Sturas automatisch Auskunft über die Sitzungsunterlagen bekommen. Das löst Verfahrensfragen. 
 - Man sollte die verschiedenen Satzungen einzeln diskutieren statt alle kreuz und quer.
-  - Bei Aufwandsentschädigung 12 (4) und 12 (5) soll gestrichen werden. Das wirkt wie ein Checks und Balances System. Aber in der Realität hat das schon öfters zu Streit zwischen den Referaten geführt.
-  -Der Stura hat genug zu tun. Er kann sich auch nicht mit Referaten befassen die ihre Arbeit nicht erledigen. Es scheint ein bisschen bevormundent, wenn das Finanzreferat das entscheidet. Aber in der Realität müsste das gut funktionieren.
+   - Bei Aufwandsentschädigung 12 (4) und 12 (5) soll gestrichen werden. Das wirkt wie ein Checks und Balances System. Aber in der Realität hat das schon öfters zu Streit zwischen den Referaten geführt.
+   - Der Stura hat genug zu tun. Er kann sich auch nicht mit Referaten befassen die ihre Arbeit nicht erledigen. Es scheint ein bisschen bevormundent, wenn das Finanzreferat das entscheidet. Aber in der Realität müsste das gut funktionieren.
 - Wenn eine Person Aufwandsentschädigung abruft, dann weiß das der Stura nicht. Das Finanzreferat aber schon. Die gefundene Variante für die Nachprüfung der Arbeit der Referate war dass die Referate regelmäßig darüber berichten. Dies ist aber in dem Stura nicht zufriedenstellend geschehen.
 - Der Paragraph sollte nicht raus weil hier immernoch über Geld geredet wird. Das Geld wird ja auch von versch. Personen bezahlt.
-  - Hier schiebt der StuRa Verantwortung ab. Das ist nicht gut.
+   - Hier schiebt der StuRa Verantwortung ab. Das ist nicht gut.
 
 ### 5.5 Änderung der Schlichtungsordung (2. Lesung)
 
 ### GO Antrag auf Verlängerung der Beratungsfrist der Schlichtungsordung
+ohne gegenrede
 
 ### 5.6 Änderung der Aufwandsentschädigungsordnung (2. Lesung)
 
@@ -114,6 +115,7 @@ Keine Änderungsanträge
 ### 5.7 Änderung der Geschäftsordnung (2. Lesung)
 
 ### GO Antrag auf Verlängerung der Beratungsfrist der Geschäftsordnung
+ohne gegenrede
 
 ### 5.8 Änderung der Wahlordnung (2. Lesung)
 - angenommen mit 36/3/3
@@ -124,12 +126,10 @@ Keine Änderungsanträge
 
 ### GO Antrag auf Verlängerung der Beratungsfrist der Organisationssatzung
 - Für welche Satzungen sollte man das machen?
-  - eigentlich alle. Es gibt in allen zu viele Baustellen.
+   - eigentlich alle. Es gibt in allen zu viele Baustellen.
 - Bei Organisationssatzung kann man das machen. Die Wahlordnung sollte man heute abstimmen. Die Schlichtungsordnung auch aber das ist nicht so dringlich wie die Wahlordnung.
-  - Ohne gegenrede angenommen
+   - Ohne gegenrede angenommen
 
-### GO Antrag auf Verlängerung der Beratungsfrist Burschenschaften
-- formale Gegenrede
 
 ## 6 Wahlen
 
@@ -148,7 +148,7 @@ Keine Änderungsanträge
 - Christoph Blattgerste gewählt mit 42/2/1
 
 ### 6.8 Kandidaturen für die Vertretungsversammlung des Studierendenwerkes Heidelberg
-#### Kandidatur von Anna Pöggeler
+### Kandidatur von Anna Pöggeler
 - Die zu wählenden Personen sind 4 und die Kandidierenden sind 5. Ist das eine Kampfkandidatur?
 - Da es eine Kampfkandidatur ist ist die Abstimmung schwierig, deswegen ist die Wahl sehr schwierig. 
 - gewählt sind:
@@ -186,9 +186,13 @@ Keine Änderungsanträge
 - Henirke Arnold gewählt mit 33/0/1
 
 ### Antrag auf Dringlichkeit der SAL Kandidaturen
+- Der StuRa behandelt die Kandidaturen von Saskia Rupp und Johannes Knop in einer Lesung.
 - ohne Gegenrede angenommen
 
 ## 7 Diskussionen
+
+### GO Antrag auf Verlängerung der Beratungsfrist Burschenschaften
+- formale Gegenrede 35/4/4
 
 ### 7.1 Unvereinbarkeit mit Burschenschaften (vertagt)
 
@@ -203,7 +207,7 @@ Keine Änderungsanträge
 
 ### 8.2.1 Änderungsantrag zu 8.2
 - Warum wurde das geändert?
-  - Zum besseren Verständnis zumindest wurde es so verstanden.
+   - Zum besseren Verständnis zumindest wurde es so verstanden.
 - In Medizin hat man pro Klausur X Versuche und somit kann diese Änderung schon Sinn ergeben.
 - angenommen mit 27/0/2
 
@@ -211,3 +215,12 @@ Keine Änderungsanträge
 
 ### 9.1 StuRa-Termine für das SoSe
 - angenommen mit 32/0/1
+Folgende Sitzungstermine für das Sommersemester 2021:
+
+ 20.04.2021
+ 04.05.2021
+ 18.05.2021
+ 01.06.2021
+ 15.06.2021
+ 29.06.2021
+ 13.07.2021
